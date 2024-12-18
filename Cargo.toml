@@ -1,0 +1,8 @@
+[workspace]
+resolver = "2"
+members = [
+    "bep-core", "bep-lancedb",
+    "bep-mongodb", "bep-neo4j",
+    "bep-qdrant", "bep-core/bep-core-derive",
+    "bep-sqlite"
+]

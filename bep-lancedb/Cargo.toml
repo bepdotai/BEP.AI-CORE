@@ -1,0 +1,36 @@
+[package]
+name = "bep-lancedb"
+version = "0.2.0"
+edition = "2021"
+license = "MIT"
+readme = "README.md"
+description = "Bep vector store index integration for LanceDB."
+repository = "https://github.com/bepdotai/bep"
+
+[dependencies]
+lancedb = "0.10.0"
+bep-core = { path = "../bep-core", version = "0.5.0" }
+arrow-array = "52.2.0"
+serde_json = "1.0.128"
+serde = "1.0.210"
+futures = "0.3.30"
+
+[dev-dependencies]
+tokio = "1.40.0"
+anyhow = "1.0.89"
+
+[[example]]
+name = "vector_search_local_ann"
+required-features = ["bep-core/derive"]
+
+[[example]]
+name = "vector_search_local_enn"
+required-features = ["bep-core/derive"]
+
+[[example]]
+name = "vector_search_s3_ann"
+required-features = ["bep-core/derive"]
+
+[[test]]
+name = "integration_tests"
+required-features = ["bep-core/derive"]
